@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detail Foto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-template *ngIf="pic; then picyes; else picno;"></ng-template>
+  <ng-template #picyes>
+    <ion-img style="width: 50%; height: 50%;" [src]="link"></ion-img>
+  </ng-template>
+  <ng-template #picno>
+    Please visit this tab using detail in tab3<br>
+  </ng-template>
+
+
+  <ion-button (click)="toTab3()">Back</ion-button>
+</ion-content>
